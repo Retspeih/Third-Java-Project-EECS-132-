@@ -1,0 +1,5 @@
+public abstract class ProgrammingLanguageFundamental <T> {
+  
+  public void value(State read) {
+  }
+}
