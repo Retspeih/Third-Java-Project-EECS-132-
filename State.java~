@@ -1,6 +1,19 @@
-public class State <T> {
+import java.util.Hashtable;
+import java.util.Hashtable.*;
+
+public class State {
   
-  public void update(String name, T value) {
+  private Hashtable<String, Integer> hash;
+  
+  public State() {
+    hash = new Hashtable<String, Integer>();
+  }
+  
+  public void update(String name, Integer value) {
+    hash.put(name, value);
+  }
+  
+  public Integer lookup(String name) {
+    return hash.get(name);
   }
 }
-    

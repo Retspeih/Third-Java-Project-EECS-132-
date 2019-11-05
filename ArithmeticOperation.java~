@@ -1,0 +1,14 @@
+public class ArithmeticOperation implements CodeFundamentals {
+  
+  private ArithmeticOperation operator;
+  private Variable variable;
+  private Number number;
+  
+  public enum Operator { Add, Sub, Mult, Div, Rem; }
+  
+  public ArithmeticOperation(Operator operator, Variable variable, Number number) {
+    this.operator = operator;
+    this.variable = variable;
+    this.number = number;
+  }
+}

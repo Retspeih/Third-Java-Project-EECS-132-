@@ -1,12 +1,24 @@
 import java.util.Hashtable;
+import java.util.Hashtable.*;
 
-public class State <T> extends ProgrammingLanguageFundamentals {
+public class State {
   
-  private 
+  private Hashtable<String, Integer> hash;
   
-  public void update(String name, T value) {
+  public State() {
+    hash = new Hashtable<String, Integer>();
   }
   
-  public T lookup(Variable variableName) {
+  public void update(String name, Integer value) {
+    hash.put(name, value);
+  }
+  
+  public Integer lookup(String name) {
+    if (hash.containsKey(name)) {
+      return hash.get(name);
+    }
+    else {
+      return 0;
+    }
   }
 }
