@@ -37,5 +37,4 @@ public class Number {
   public Integer getNumber() {
     return number;
   }
-  
 }
