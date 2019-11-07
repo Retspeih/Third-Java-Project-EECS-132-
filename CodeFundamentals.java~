@@ -1,2 +1,5 @@
-public interface CodeFundamentals extends CodeBody {
+public interface CodeFundamentals<T> extends CodeBody {
+  
+  T value(State s);
+  
 }

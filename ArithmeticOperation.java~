@@ -1,14 +1,19 @@
-public class ArithmeticOperation implements CodeFundamentals {
+public class ArithmeticOperation<K, V> implements CodeFundamentals {
   
-  private ArithmeticOperation operator;
-  private Variable variable;
-  private Number number;
+  private Operator operator;
+  private State left;
+  private State right;
   
   public enum Operator { Add, Sub, Mult, Div, Rem; }
   
-  public ArithmeticOperation(Operator operator, Variable variable, Number number) {
+  public ArithmeticOperation(Operator operator, State left , State right) {
     this.operator = operator;
-    this.variable = variable;
-    this.number = number;
+    this.left = left;
+    this.right = right;
   }
-}
+  
+  
+  public Integer value(State s) {
+    
+  }
+    

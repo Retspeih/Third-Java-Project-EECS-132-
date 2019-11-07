@@ -1,0 +1,9 @@
+import org.junit.*;
+import org.junit.Assert.*;
+
+public class JUnitVariableTester {
+  
+  public class testValue() {
+    Variable var = new Variable("Yeet");
+    State state = new State();
+    state.update("yeet

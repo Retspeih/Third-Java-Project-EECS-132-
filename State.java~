@@ -14,6 +14,11 @@ public class State {
   }
   
   public Integer lookup(String name) {
-    return hash.get(name);
+    if (hash.containsKey(name)) {
+      return hash.get(name);
+    }
+    else {
+      return 0;
+    }
   }
 }
