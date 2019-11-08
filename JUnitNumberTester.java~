@@ -1,0 +1,15 @@
+import org.junit.*;
+import static org.junit.Assert.*;
+
+
+public class JUnitNumberTester {
+  
+  /**
+   * tests the value() method for Number
+   */
+  public void testValue() {
+    Number n = new Number(10);
+    State s = new State()
+    assertEquals(10, n.value(s));
+  }
+}

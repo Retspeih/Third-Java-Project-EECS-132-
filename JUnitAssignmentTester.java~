@@ -1,0 +1,15 @@
+import org.junit.*;
+import static org.junit.Assert.*;
+
+public class JUnitAssignmentTester {
+  
+  /**
+   * tests the value() method in Assignment
+   */
+  @Test
+  public void testValue() {
+    State s = new State()
+    Assignment c = new Assignment(new Variable("Yeet"), new Number(20));
+    assertEquals(20, c.value(s))
+  }
+}

@@ -1,0 +1,37 @@
+public class BooleanOperation implements CodeFundamentals {
+  
+  private Operator operator;
+  
+  private Comparison left;
+  
+  private Comparison right;
+  
+  public enum Operator { And, Or;}
+  
+  public BooleanOperation(Operator operator, Comparison left, Comparison right) {
+    this.operator = operator;
+    this.left = left;
+    this.right = right;
+  }
+  
+  public Boolean value(State state) {
+    switch(operator) {
+      case And:
+        if (left.value(state) == true && right.value(state) == true) {
+        return new Boolean(true);
+      }
+        else {
+          return new Boolean(false);
+        }
+      case Or:
+        if (left.value(state) == true || right.value(state) == true) {
+        return true;
+      }
+        else {
+          return false;
+        }
+      default:
+        return false;
+    }
+  }
+}

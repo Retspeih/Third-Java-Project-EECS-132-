@@ -1,0 +1,3 @@
+public class ConditionalStatement implements CodeExecution {
+  
+  public ConditionalStatement(BooleanOperation operation, CompoundState

@@ -1,0 +1,32 @@
+public class Return implements CodeExecution {
+  
+  private Number number = null;
+  private ArithmeticOperation operation = null;
+  private Variable retorn = new Variable("return");
+  private State state = null;
+  
+  public Return(Number number) {
+    this.number = number;
+  }
+  
+  public Return(ArithmeticOperation operation) {
+    this.operation = operation;
+  }
+  
+  public Variable getReturn() {
+    return retorn;
+  }
+  
+  public void execute(State state) {
+    if (number != null) {
+      state.update(getReturn().getName(), number.value());
+    }
+    else {
+      state.update(getReturn().getName(), operation.value());
+    }
+  }
+  
+  public State getState() {
+    return state;
+  }
+}

@@ -1,0 +1,15 @@
+import org.junit.*;
+import org.junit.Assert.*;
+
+public class JUnitReturnTester {
+  
+  /**
+   * test toString() method for Return
+   */
+  @Test
+  public void testToString() {
+    Return c = new Return(new Number(20));
+    assertEquals("return 20", c.toString());
+  }
+}
+    

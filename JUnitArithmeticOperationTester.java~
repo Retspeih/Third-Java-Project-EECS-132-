@@ -1,0 +1,15 @@
+import org.junit.*;
+import static org.junit.Assert.*;
+
+public class JUnitArithmeticOperationTester {
+  
+  @Test
+  public void testValue() {
+    State s = new State();
+    Variable d = new Variable("Yeet");
+    s.update(d.getName(), 15);
+    ArithmeticOperation n = new ArithmeticOperation(ArithmeticOperation.Operator.Add, new Number(10), d.value());
+    assertEquals(25, n.value(s));
+  }
+}
+  

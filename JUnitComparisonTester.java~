@@ -1,0 +1,15 @@
+import org.junit.*;
+import static org.junit.Assert.*;
+
+public class JUnitComparisonTester {
+  
+  @Test
+  public void testValue() {
+    State s = new State();
+    Number n = new Number(10);
+    Variable v = new Variable("yeems");
+    s.update("yeems", 50);
+    Comparison c = new Comparison(Comparison.Operator.LT, n, v);
+    assertEquals(true, c.value(s));
+  }
+}

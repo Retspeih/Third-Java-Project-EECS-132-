@@ -1,0 +1,5 @@
+public interface CodeExecution {
+  
+  void execute(State state);
+  
+}

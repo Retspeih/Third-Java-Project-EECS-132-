@@ -1,0 +1,19 @@
+import org.junit.*;
+import static org.junit.Assert.*;
+
+public class JUnitBooleanOperationTester {
+  
+  /**
+    * tests value() method in BooleanOperation
+    */
+  @Test
+  public void testValue() {
+    State s = new State();
+    Number a = new Number(10);
+    Number b = new Number(20);
+    Comparison c = new Comparison(Comparison.Operator.LT, a, b);
+    Comparison d = new Comparison(Comparison.Operator.GT, a, b);
+    BooleanOperation f = new BooleanOperation(BooleanOperation.Operator.Or, c, d);
+    assertEquals(true, f.value(s));
+  }
+}
